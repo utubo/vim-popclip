@@ -7,23 +7,21 @@
 ```vim
 vim9script
 packadd vim-popclip
-popclip#Init({ key: 'P' })
-# Since you use 'P' often, you might want to map it to '<Space>p'.
-# popclip#Init({ key: '<Space>p' })
+popclip#Init({ key: 'C' })
 ```
 
 ## Clip Visual Bock
 
 1. Select a visual block
-2. type 'P'
+2. type 'C'
 
 Also, you can clip text-obj.
 
-e.g.) type 'Piw' on Normal Mode.
+e.g.) type 'Ciw' on Normal Mode.
 
 ## Move Popup
 
-1. type 'cP'
+1. type 'cC'
 2. type 'h', 'j', 'k', 'l' to move the popup.
 3. type '<CR>' to complete.
 
@@ -32,12 +30,12 @@ You can move the cursor or input the winid to select the target popup.
 
 ## Close Popup
 
-type 'dP'
+type 'dC'
 
 ## Yank Cliped Text
 
-- As Lines: type 'yP' or 'yaP'
-- As Text block: type 'yiP'
+- As Lines: type 'yC' or 'yaC'
+- As Text block: type 'yiC'
 
 # Settings
 popclip#Init(&lt;settings>)
@@ -45,7 +43,7 @@ popclip#Init(&lt;settings>)
 - key: Default ''. Mapping key.
 - move_label: Default '+', The label of the moving popup window.
 - clip_and_move: Default false, Move the popup after clip a text.
-- yank_as_block: Default false, Yank the cliped text as bock with type 'yP'.
+- yank_as_block: Default false, Yank the cliped text as bock with type 'yC'.
 - select_at_cursor: Default true, Enable select the target popup at the cursor.
 - popup_props: popup_create-aguments.
 

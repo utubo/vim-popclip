@@ -8,6 +8,8 @@
 vim9script
 packadd vim-popclip
 popclip#Init({ key: 'P' })
+# Since you use 'P' often, you might want to map it to '<Space>P'.
+# popclip#Init({ key: '<Space>P' })
 ```
 
 ## Clip Visual Bock

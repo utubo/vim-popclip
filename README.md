@@ -5,7 +5,7 @@
 # Usage
 
 ```vim
-vim9scipt
+vim9script
 packadd vim-popclip
 popclip#Init({ key: 'P' })
 ```

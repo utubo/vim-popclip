@@ -41,10 +41,10 @@ type 'dP'
 popclip#Init(&lt;settings>)
 
 - key: Default ''. Mapping key.
-- move_label: Default '+', The label of a moving popup window.
+- move_label: Default '+', The label of the moving popup window.
 - clip_and_move: Default false, Move the popup after clip a text.
-- yank_block: Default false, Yank the cliped text as lines with type 'yP'.   
-- select_at_cursor: Default true, Enable select target popup at the cursor.
+- yank_block: Default false, Yank the cliped text as lines with type 'yP'.
+- select_at_cursor: Default true, Enable select the target popup at the cursor.
 - popup_props: popup_create-aguments.
 
 

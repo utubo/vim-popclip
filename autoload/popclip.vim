@@ -5,7 +5,7 @@ g:popclip = {
   key: '',
   move_label: '+',
   clip_and_move: false,
-  yank_block: false,
+  yank_as_block: false,
   select_at_cursor: true,
   popup_props: {
     border: [1, 1, 1, 1],
@@ -235,7 +235,7 @@ export def Op(ope: string, reg: string, opt: string)
     return
   endif
   if ope ==# 'y' || ope ==# 'd'
-    yankopt = opt ==# 'x' ? g:popclip.yank_block ? 'b' : 'l' : opt
+    yankopt = opt ==# 'x' ? g:popclip.yank_as_block ? 'b' : 'l' : opt
     yankreg = reg
     yanklines = []
     for i in ids
@@ -260,7 +260,7 @@ onoremap <silent> <Plug>(popclip-op-l) <ScriptCmd>popclip#Op(v:operator, v:regis
 
 nnoremap <Plug>(popclip) <Plug>(popclip-clip)
 xnoremap <Plug>(popclip) <Plug>(popclip-clip)
-onoremap <Plug>(popclip) <Plug>(popclip-op-b)
+onoremap <Plug>(popclip) <Plug>(popclip-op-x)
 onoremap i<Plug>(popclip) <Plug>(popclip-op-b)
 onoremap a<Plug>(popclip) <Plug>(popclip-op-l)
 

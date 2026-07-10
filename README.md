@@ -34,8 +34,8 @@ type 'dP'
 
 ## Yank Cliped Text
 
-- As Text block: type 'yP' or 'yiP'
-- As Lines: type 'yaP'
+- As Lines: type 'yP' or 'yaP'
+- As Text block: type 'yiP'
 
 # Settings
 popclip#Init(&lt;settings>)
@@ -43,7 +43,7 @@ popclip#Init(&lt;settings>)
 - key: Default ''. Mapping key.
 - move_label: Default '+', The label of the moving popup window.
 - clip_and_move: Default false, Move the popup after clip a text.
-- yank_block: Default false, Yank the cliped text as lines with type 'yP'.
+- yank_as_block: Default false, Yank the cliped text as bock with type 'yP'.
 - select_at_cursor: Default true, Enable select the target popup at the cursor.
 - popup_props: popup_create-aguments.
 

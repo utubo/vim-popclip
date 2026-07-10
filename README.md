@@ -21,15 +21,16 @@ e.g.) type 'Piw' on Normal Mode.
 
 ## Move Popup
 
-1. Move the cursor on the target popup.
-2. type 'cP'
-3. type 'h', 'j', 'k', 'l' to move the popup.
-4. type '<CR>' to complete.
+1. type 'cP'
+2. type 'h', 'j', 'k', 'l' to move the popup.
+3. type '<CR>' to complete.
+
+If the clips are popuped more than 1,
+You can move the cursor or input the winid to select the target popup.
 
 ## Close Popup
 
-1. Move the cursor on the target popup.
-2. type 'dP'
+type 'dP'
 
 ## Yank Cliped Text
 

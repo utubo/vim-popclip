@@ -95,7 +95,7 @@ export def Move(ids: list<number>)
     popup_setoptions(w, { title: g:popclip.move_label })
   endfor
   # NOTE: <Esc> to exit Insert mode
-  feedkeys("\<Esc>\<ScriptCmd>popclip#KeyhookForMove()\<CR>", 'n')
+  feedkeys("\<Esc>\<ScriptCmd>call popclip#KeyhookForMove()\<CR>", 'n')
 enddef
 
 export def KeyhookForMove()

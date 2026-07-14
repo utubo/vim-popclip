@@ -44,6 +44,7 @@ If multiple popups are open:
 - `b` ... Bottom
 - `z` ... Increment z-index
 - `Z` ... Decrement z-index
+- `<CR>` or `<Esc>` ... Confirm and exit.
 
 ## Close Popup
 

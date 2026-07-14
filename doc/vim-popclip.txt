@@ -54,16 +54,16 @@ If multiple popups are open:
 
 MOVE MODE MAPPINGS ~
 
-- h … Left
-- j … Up
-- k … Down
-- l … Right
-- ^ or 0 … Left Edge
-- $ … Right Edge
-- t … Top
-- b … Bottom
-- z … Increment z-index
-- Z … Decrement z-index
+- `h` … Left
+- `j` … Up
+- `k` … Down
+- `l` … Right
+- `^` or `0` … Left Edge
+- `$` … Right Edge
+- `t` … Top
+- `b` … Bottom
+- `z` … Increment z-index
+- `Z` … Decrement z-index
 
 
 CLOSE POPUP                                    *vim-popclip-usage-close-popup*

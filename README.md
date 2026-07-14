@@ -42,8 +42,8 @@ If multiple popups are open:
 - $ ... Right Edge
 - t ... Top
 - b ... Bottom
-- z ... Incliment z-index
-- Z ... Decliment z-index
+- z ... Increment z-index
+- Z ... Decrement z-index
 
 ## Close Popup
 

@@ -6,6 +6,8 @@ A Vim plugin that displays selected text in a popup window.
 
 # Usage
 
+## Installation
+
 ```vim
 vim9script
 packadd vim-popclip
@@ -81,4 +83,7 @@ popclip#Init({
   Enables selecting a target popup based on the cursor position.
 - `popup_props` (Dictionary):  
   Options passed directly to `popup_create()` arguments.
+
+# License
+[NYSL](http://www.kmonos.net/nysl/index.en.html)
 

@@ -64,6 +64,7 @@ MOVE MODE MAPPINGS ~
 - `b` … Bottom
 - `z` … Increment z-index
 - `Z` … Decrement z-index
+- `<CR>` or `<Esc>` … Confirm and exit.
 
 
 CLOSE POPUP                                    *vim-popclip-usage-close-popup*

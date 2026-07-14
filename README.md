@@ -66,16 +66,16 @@ popclip#Init({
 })
 ```
 
-- `key` (String): Default `''`.
+- `key` (String): Default `''`.  
   The base key mapping for the plugin.
-- `move_label` (String): Default `'+'`.
+- `move_label` (String): Default `'+'`.  
   The indicator label displayed on the popup window in move mode.
-- `clip_and_move` (Boolean): Default `false`.
+- `clip_and_move` (Boolean): Default `false`.  
   Automatically enter move mode immediately after displaying a popup.
-- `yank_as_block` (Boolean): Default `false`.
+- `yank_as_block` (Boolean): Default `false`.  
   Changes the behavior of `yC` to yank as blockwise instead of linewise.
-- `select_at_cursor` (Boolean): Default `true`.
+- `select_at_cursor` (Boolean): Default `true`.  
   Enables selecting a target popup based on the cursor position.
-- `popup_props` (Dictionary):
+- `popup_props` (Dictionary):  
   Options passed directly to `popup_create()` arguments.
 

@@ -34,16 +34,16 @@ If multiple popups are open:
 
 ### Move Mode Mappings
 
-- h ... Left
-- j ... Up
-- k ... Down
-- l ... Right
-- ^ or 0 ... Left Edge
-- $ ... Right Edge
-- t ... Top
-- b ... Bottom
-- z ... Increment z-index
-- Z ... Decrement z-index
+- `h` ... Left
+- `j` ... Up
+- `k` ... Down
+- `l` ... Right
+- `^` or `0` ... Left Edge
+- `$` ... Right Edge
+- `t` ... Top
+- `b` ... Bottom
+- `z` ... Increment z-index
+- `Z` ... Decrement z-index
 
 ## Close Popup
 

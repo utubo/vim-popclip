@@ -85,5 +85,6 @@ popclip#Init({
   Options passed directly to `popup_create()` arguments.
 
 # License
+(c) utubo
 [NYSL](http://www.kmonos.net/nysl/index.en.html)
 

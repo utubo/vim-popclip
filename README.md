@@ -38,10 +38,12 @@ If multiple popups are open:
 - j ... Up
 - k ... Down
 - l ... Right
-- ^ ... Left Edge
+- ^ or 0 ... Left Edge
 - $ ... Right Edge
 - t ... Top
 - b ... Bottom
+- z ... Incliment z-index
+- Z ... Decliment z-index
 
 ## Close Popup
 

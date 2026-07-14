@@ -119,8 +119,6 @@ def MoveFilter(popupid: number, k: string): bool
       popup_setoptions(_id, { title: '' })
     endfor
     popup_close(popupid)
-  elseif k =~# '[0-9]'
-    movecount = movecount * 10 + str2nr(k)
   elseif k ==# 'j'
     dy = mc
   elseif k ==# 'l'
@@ -135,12 +133,14 @@ def MoveFilter(popupid: number, k: string): bool
     dx = &columns
   elseif k ==# 't' || k ==# 'u'
     dy = - &lines
-  elseif k ==# '^'
+  elseif k ==# '^' || k ==# '0' && movecount ==# 0
     dx = - &columns
   elseif k ==# 'z'
     dz = mc
   elseif k ==# 'Z'
     dz = - mc
+  elseif k =~# '[0-9]'
+    movecount = movecount * 10 + str2nr(k)
   else
     return false
   endif

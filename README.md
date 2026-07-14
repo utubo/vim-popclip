@@ -1,5 +1,7 @@
 # vim-popclip
 
+A Vim plugin that displays selected text in a popup window.
+
 <img width="1146" height="653" alt="popclip" src="https://github.com/user-attachments/assets/a0ea3e2d-fe98-4855-88a1-220316c8af70" />
 
 # Usage
@@ -10,41 +12,64 @@ packadd vim-popclip
 popclip#Init({ key: 'C' })
 ```
 
-## Clip Visual Bock
+## Clip Visual Block
 
-1. Select a visual block
-2. type 'C'
+1. Enter Visual Block mode and select text.
+2. Press `C`
 
 Also, you can clip text-obj.
 
-e.g.) type 'Ciw' on Normal Mode.
+e.g.) Press `Ciw` in Normal Mode.
 
 ## Move Popup
 
-1. type 'cC'
-2. type 'h', 'j', 'k', 'l' to move the popup.
-3. type '<CR>' to complete.
+1. Press `cC` to enter move mode.
+2. Use `h`, `j`, `k`, `l` to move the popup window.
+3. Press `<CR>` to confirm and exit.
 
-If the clips are popuped more than 1,
-You can move the cursor or input the winid to select the target popup.
+If multiple popups are open:
+
+- Move your cursor to focus on a target popup, or
+- Input the specific `winid` to select it.
+
+### Move Mode Mappings
+
+- h ... Left
+- j ... Up
+- k ... Down
+- l ... Right
+- ^ ... Left Edge
+- $ ... Right Edge
+- t ... Top
+- b ... Bottom
 
 ## Close Popup
 
-type 'dC'
+Press `dC`
 
-## Yank Cliped Text
+## Yank Popup Text
 
-- As Lines: type 'yC' or 'yaC'
-- As Text block: type 'yiC'
+- Linewise: Press `yC` or `yaC`
+- Blockwise: Press `yiC`
 
-# Settings
-popclip#Init(&lt;settings>)
+# Configuration
 
-- key: Default ''. Mapping key.
-- move_label: Default '+', The label of the moving popup window.
-- clip_and_move: Default false, Move the popup after clip a text.
-- yank_as_block: Default false, Yank the cliped text as bock with type 'yC'.
-- select_at_cursor: Default true, Enable select the target popup at the cursor.
-- popup_props: popup_create-aguments.
+To customize the plugin, pass a dictionary of settings to `popclip#Init()`.  
+You only need to specify the options you want to change from the default values:
 
+```vim
+vim9script
+# Example: Only changing the key mapping and clip_and_move option
+popclip#Init({
+  key: 'p',
+  clip_and_move: true,
+})
+```
+
+- **key** (String): Default `''`. The base key mapping for the plugin.
+- **move_label** (String): Default `'+'`. The indicator label displayed on the popup window in move mode.
+- **clip_and_move** (Boolean): Default `false`. Automatically enter move mode immediately after displaying a popup.
+- **yank_as_block** (Boolean): Default `false`. Changes the behavior of `yC` to yank as blockwise instead of linewise.
+- **select_at_cursor** (Boolean): Default `true`. Enables selecting a target popup based on the cursor position.
+- **popup_props** (Dictionary): Options passed directly to `popup_create()` arguments.
 

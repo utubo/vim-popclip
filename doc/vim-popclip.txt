@@ -58,10 +58,12 @@ MOVE MODE MAPPINGS ~
 - j … Up
 - k … Down
 - l … Right
-- ^ … Left Edge
+- ^ or 0 … Left Edge
 - $ … Right Edge
 - t … Top
 - b … Bottom
+- z … Incliment z-index
+- Z … Decliment z-index
 
 
 CLOSE POPUP                                    *vim-popclip-usage-close-popup*

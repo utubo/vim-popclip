@@ -268,12 +268,13 @@ def Map(key: string)
   if !key
     return
   endif
-  execute $'nmap {key} <Plug>(popclip)'
-  execute $'xmap {key} <Plug>(popclip)'
-  execute $'omap {key} <Plug>(popclip)'
-  execute $'omap i{key} i<Plug>(popclip)'
-  execute $'omap a{key} a<Plug>(popclip)'
-  execute $'nmap {key}{key[-1]} 0<Plug>(popclip)$'
+  const k = key->keytrans()
+  execute $'nmap {k} <Plug>(popclip)'
+  execute $'xmap {k} <Plug>(popclip)'
+  execute $'omap {k} <Plug>(popclip)'
+  execute $'omap i{k} i<Plug>(popclip)'
+  execute $'omap a{k} a<Plug>(popclip)'
+  execute $'nmap {k}{key[-1]->keytrans()} 0<Plug>(popclip)$'
 enddef
 # }}}
 

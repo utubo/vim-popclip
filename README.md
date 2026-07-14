@@ -74,7 +74,7 @@ popclip#Init({
   The indicator label displayed on the popup window in move mode.
 - `clip_and_move` (Boolean): Default `false`.  
   Automatically enter move mode immediately after displaying a popup.
-- `yank_as_block` (Boolean): Default `false`.  
+- `yank_blockwise` (Boolean): Default `false`.  
   Changes the behavior of `yC` to yank as blockwise instead of linewise.
 - `select_at_cursor` (Boolean): Default `true`.  
   Enables selecting a target popup based on the cursor position.

@@ -127,11 +127,11 @@ def MoveFilter(popupid: number, k: string): bool
     dy = - mc
   elseif k ==# 'h'
     dx = - mc
-  elseif k ==# 'b' || k ==# 'm'
+  elseif k ==# 'b'
     dy = &lines
   elseif k ==# '$'
     dx = &columns
-  elseif k ==# 't' || k ==# 'u'
+  elseif k ==# 't'
     dy = - &lines
   elseif k ==# '^' || k ==# '0' && movecount ==# 0
     dx = - &columns

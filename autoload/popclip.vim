@@ -83,9 +83,8 @@ export def Clip(motion: string = '')
   endwhile
 
   if g:popclip.clip_and_move
-    timer_start(1, (_) => {
-      Move([id])
-    })
+    redraw!
+    Move([id])
   endif
 enddef
 # }}}

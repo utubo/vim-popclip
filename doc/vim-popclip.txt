@@ -88,8 +88,9 @@ YANK POPUP TEXT ~
 
 CONFIGURATION                          *vim-popclip-vim-popclip-configuration*
 
-To customize the plugin, pass a dictionary of settings to `popclip#Init()`. You
-only need to specify the options you want to change from the default values:
+To customize the plugin, pass a dictionary of settings to
+`popclip#Init({settings})`. You only need to specify the options you want to
+change from the default values:
 
 >vim
     vim9script

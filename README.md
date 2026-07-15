@@ -101,6 +101,17 @@ Use the following `<Plug>` mappings if you want manual control over your keybind
 - `<Plug>(popclip-op-l)`: omap  
   Forces the popup text to be yanked as linewise.
 
+# Functions
+
+Users can call the following functions to interact with the plugin:
+
+- `popclip#Init({settings})`  
+  Initializes the plugin with user configurations.  
+  (See the Configuration section for details.)
+- `popclip#PopupList()`  
+  Return a List with the window-ID of all existing popclip popups.  
+  Return type: `list<number>`
+
 ## License
 
 [NYSL](http://www.kmonos.net/nysl/index.en.html) (c) utubo

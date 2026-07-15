@@ -17,6 +17,11 @@ export def Init(settings: dict<any>)
   Map(g:popclip.key)
 enddef
 
+export def PopupList(): list<number>
+  return popup_list()
+    ->filter((_, id) => getwinvar(id, 'is_popclip', false))
+enddef
+
 def GetBdWidth(idx: number): number
   try
     return g:popclip.popup_props.border[idx]
@@ -183,8 +188,7 @@ def GetWinid(): list<number>
     endif
   endif
   var targets = []
-  compids = popup_list()
-    ->filter((_, id) => getwinvar(id, 'is_popclip', false))
+  compids = PopupList()
   if compids->len() ==# 0
   # NOP
   elseif compids->len() ==# 1

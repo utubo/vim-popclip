@@ -1,5 +1,5 @@
 *vim-popclip.txt*
-                                  For NVIM v0.8.0    Last change: 2026 July 15
+                                     For Vim v9.2    Last change: 2026 July 15
 
 ==============================================================================
 Table of Contents                              *vim-popclip-table-of-contents*

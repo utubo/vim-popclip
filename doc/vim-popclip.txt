@@ -10,8 +10,8 @@ Table of Contents                              *vim-popclip-table-of-contents*
   - Usage                                      |vim-popclip-vim-popclip-usage|
   - Configuration                      |vim-popclip-vim-popclip-configuration|
   - Mappings                                |vim-popclip-vim-popclip-mappings|
-2. Functions                                           |vim-popclip-functions|
-  - License                                    |vim-popclip-functions-license|
+  - Functions                              |vim-popclip-vim-popclip-functions|
+  - License                                  |vim-popclip-vim-popclip-license|
 
 ==============================================================================
 1. vim-popclip                                       *vim-popclip-vim-popclip*
@@ -130,8 +130,7 @@ keybindings:
     Forces the popup text to be yanked as linewise.
 
 
-==============================================================================
-2. Functions                                           *vim-popclip-functions*
+FUNCTIONS                                  *vim-popclip-vim-popclip-functions*
 
 You can call the following functions to interact with the plugin:
 
@@ -143,7 +142,7 @@ You can call the following functions to interact with the plugin:
     Return type: `list<number>`
 
 
-LICENSE                                        *vim-popclip-functions-license*
+LICENSE                                      *vim-popclip-vim-popclip-license*
 
 NYSL <http://www.kmonos.net/nysl/index.en.html> (c) utubo
 

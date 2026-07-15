@@ -63,7 +63,7 @@ Press `dC`
 
 ## Configuration
 
-To customize the plugin, pass a dictionary of settings to `popclip#Init()`.  
+To customize the plugin, pass a dictionary of settings to `popclip#Init({settings})`.  
 You only need to specify the options you want to change from the default values:
 
 ```vim

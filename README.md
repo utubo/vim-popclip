@@ -84,6 +84,18 @@ popclip#Init({
 - `popup_props` (Dictionary):  
   Options passed directly to `popup_create()` arguments.
 
+# Mappings
+
+- `<Plug>(popclip-clip)`: nmap, xmap  
+  Displays the selected text in a popup window.
+- `<Plug>(popclip-op)`: omap  
+  Triggers a sub-mode to yank, close, or move the popup window.
+- `<Plug>(popclip-op-b)`: omap  
+  Forces the popup text to be yanked as blockwise.
+- `<Plug>(popclip-op-l)`: omap  
+  Forces the popup text to be yanked as linewise.
+
 # License
+
 [NYSL](http://www.kmonos.net/nysl/index.en.html) (c) utubo
 

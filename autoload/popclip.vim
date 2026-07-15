@@ -225,7 +225,7 @@ var yankopt = ''
 var yankreg = ''
 var yanklines: any = ''
 
-export def Op(ope: string, reg: string, opt: string)
+export def Op(ope: string, reg: string, wise: string = '')
   const ids = GetWinid()
   if !ids
     return
@@ -235,7 +235,7 @@ export def Op(ope: string, reg: string, opt: string)
     return
   endif
   if ope ==# 'y' || ope ==# 'd'
-    yankopt = opt ==# 'x' ? g:popclip.yank_blockwise ? 'b' : 'l' : opt
+    yankopt = !wise ? g:popclip.yank_blockwise ? 'b' : 'l' : wise
     yankreg = reg
     yanklines = []
     for i in ids
@@ -254,26 +254,20 @@ enddef
 # Mapping {{{
 nnoremap <silent> <Plug>(popclip-clip) <ScriptCmd>&opfunc = 'popclip#Clip'<CR>g@
 xnoremap <silent> <Plug>(popclip-clip) <ScriptCmd>&opfunc = 'popclip#Clip'<CR>g@
-onoremap <silent> <Plug>(popclip-op-x) <ScriptCmd>popclip#Op(v:operator, v:register, 'x')<CR>
+onoremap <silent> <Plug>(popclip-op)   <ScriptCmd>popclip#Op(v:operator, v:register)<CR>
 onoremap <silent> <Plug>(popclip-op-b) <ScriptCmd>popclip#Op(v:operator, v:register, 'b')<CR>
 onoremap <silent> <Plug>(popclip-op-l) <ScriptCmd>popclip#Op(v:operator, v:register, 'l')<CR>
-
-nnoremap <Plug>(popclip) <Plug>(popclip-clip)
-xnoremap <Plug>(popclip) <Plug>(popclip-clip)
-onoremap <Plug>(popclip) <Plug>(popclip-op-x)
-onoremap i<Plug>(popclip) <Plug>(popclip-op-b)
-onoremap a<Plug>(popclip) <Plug>(popclip-op-l)
 
 def Map(key: string)
   if !key
     return
   endif
   const k = key->keytrans()
-  execute $'nmap {k} <Plug>(popclip)'
-  execute $'xmap {k} <Plug>(popclip)'
-  execute $'omap {k} <Plug>(popclip)'
-  execute $'omap i{k} i<Plug>(popclip)'
-  execute $'omap a{k} a<Plug>(popclip)'
+  execute $'nmap {k} <Plug>(popclip-clip)'
+  execute $'xmap {k} <Plug>(popclip-clip)'
+  execute $'omap {k} <Plug>(popclip-op)'
+  execute $'omap i{k} <Plug>(popclip-op-b)'
+  execute $'omap a{k} <Plug>(popclip-op-l)'
   execute $'nmap {k}{key[-1]->keytrans()} 0<Plug>(popclip)$'
 enddef
 # }}}

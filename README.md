@@ -37,6 +37,7 @@ If multiple popups are open:
 
 - Move your cursor to focus on a target popup, or
 - Input the specific `winid` to select it.
+- Input `*` to select all popups at once.
 
 #### Move Mode Mappings
 

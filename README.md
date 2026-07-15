@@ -90,7 +90,7 @@ popclip#Init({
 
 ## Mappings
 
-Use the following `<Plug>` mappings only if you want manual control over your keybindings:
+Use the following `<Plug>` mappings if you want manual control over your keybindings:
 
 - `<Plug>(popclip-clip)`: nmap, xmap  
   Displays the selected text in a popup window.

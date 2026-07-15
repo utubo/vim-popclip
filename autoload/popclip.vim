@@ -66,15 +66,15 @@ export def Clip(motion: string = '')
   # Fix syntax highlights
   var l = 1
   var c = 1
-  var hiname = 'Normal'
+  var hl = 'Normal'
   while true
     const ll = head[1] + l - 1
     const cc = (motion ==# 'block' || l ==# 1 ? head[2] : 1) + c - 1
     if tail[1] < ll || tail[1] ==# ll && tail[2] < cc
       break
     endif
-    hiname = synID(ll, cc, 1)->synIDattr('name') ?? hiname
-    win_execute(id, $'syntax match {hiname} /\%{l}l\%{c}c./')
+    hl = synID(ll, cc, 1)->synIDattr('name') ?? hl
+    win_execute(id, $"call matchaddpos('{hl}', [[{l}, {c}]])")
     c += 1
     if motion ==# 'block' && tail[2] <= cc || getline(ll)->len() < cc
       l += 1

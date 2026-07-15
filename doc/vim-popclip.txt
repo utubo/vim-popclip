@@ -1,5 +1,5 @@
 *vim-popclip.txt*
-                                  For NVIM v0.8.0    Last change: 2026 July 14
+                                  For NVIM v0.8.0    Last change: 2026 July 15
 
 ==============================================================================
 Table of Contents                              *vim-popclip-table-of-contents*
@@ -12,7 +12,8 @@ Table of Contents                              *vim-popclip-table-of-contents*
   - Close Popup                                |vim-popclip-usage-close-popup|
   - Yank Popup Text                        |vim-popclip-usage-yank-popup-text|
 3. Configuration                                   |vim-popclip-configuration|
-4. License                                               |vim-popclip-license|
+4. Mappings                                             |vim-popclip-mappings|
+5. License                                               |vim-popclip-license|
 
 ==============================================================================
 1. vim-popclip                                       *vim-popclip-vim-popclip*
@@ -113,7 +114,20 @@ only need to specify the options you want to change from the default values:
 
 
 ==============================================================================
-4. License                                               *vim-popclip-license*
+4. Mappings                                             *vim-popclip-mappings*
+
+- `<Plug>(popclip-clip)`: nmap, xmap
+    Displays the selected text in a popup window.
+- `<Plug>(popclip-op)`: omap
+    Triggers a sub-mode to yank, close, or move the popup window.
+- `<Plug>(popclip-op-b)`: omap
+    Forces the popup text to be yanked as blockwise.
+- `<Plug>(popclip-op-l)`: omap
+    Forces the popup text to be yanked as linewise.
+
+
+==============================================================================
+5. License                                               *vim-popclip-license*
 
 NYSL <http://www.kmonos.net/nysl/index.en.html> (c) utubo
 

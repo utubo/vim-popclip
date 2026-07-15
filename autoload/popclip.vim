@@ -264,6 +264,12 @@ onoremap <silent> <Plug>(popclip-op)   <ScriptCmd>popclip#Op(v:operator, v:regis
 onoremap <silent> <Plug>(popclip-op-b) <ScriptCmd>popclip#Op(v:operator, v:register, 'b')<CR>
 onoremap <silent> <Plug>(popclip-op-l) <ScriptCmd>popclip#Op(v:operator, v:register, 'l')<CR>
 
+def ClipCurrentLine()
+  const p = getcurpos()
+  execute "normal ^\<Plug>(popclip-clip)$"
+  setpos('.', p)
+enddef
+
 def Map(key: string)
   if !key
     return
@@ -274,7 +280,8 @@ def Map(key: string)
   execute $'omap {k} <Plug>(popclip-op)'
   execute $'omap i{k} <Plug>(popclip-op-b)'
   execute $'omap a{k} <Plug>(popclip-op-l)'
-  execute $'nmap {k}{key[-1]->keytrans()} 0<Plug>(popclip)$'
+  execute $'nmap {k}{key[-1]->keytrans()} ^<Plug>(popclip-clip)$'
+  execute $'nmap {k}{key[-1]->keytrans()} <Scriptcmd>ClipCurrentLine()<CR>'
 enddef
 # }}}
 

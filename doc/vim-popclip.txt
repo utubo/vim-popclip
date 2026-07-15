@@ -116,6 +116,9 @@ only need to specify the options you want to change from the default values:
 ==============================================================================
 4. Mappings                                             *vim-popclip-mappings*
 
+Use the following `<Plug>` mappings only if you want manual control over your
+keybindings:
+
 - `<Plug>(popclip-clip)`: nmap, xmap
     Displays the selected text in a popup window.
 - `<Plug>(popclip-op)`: omap

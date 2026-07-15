@@ -85,6 +85,8 @@ popclip#Init({
   Changes the behavior of `yC` to yank as blockwise instead of linewise.
 - `select_at_cursor` (Boolean): Default `true`.  
   Enables selecting a target popup based on the cursor position.
+- `syntax_highlight` (Boolean): Default `true`.  
+  Replicating the original syntax highlighting inside the popup window.
 - `popup_props` (Dictionary): Default `{ border: [1, 1, 1, 1] }`  
   Options passed directly to `popup_create()` arguments.
 

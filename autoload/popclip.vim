@@ -7,6 +7,7 @@ g:popclip = {
   clip_and_move: false,
   yank_blockwise: false,
   select_at_cursor: true,
+  syntax_highlight: true,
   popup_props: {
     border: [1, 1, 1, 1],
   },
@@ -64,23 +65,25 @@ export def Clip(motion: string = '')
   setwinvar(id, 'is_popclip', true)
 
   # Fix syntax highlights
-  var l = 1
-  var c = 1
-  var hl = 'Normal'
-  while true
-    const ll = head[1] + l - 1
-    const cc = (motion ==# 'block' || l ==# 1 ? head[2] : 1) + c - 1
-    if tail[1] < ll || tail[1] ==# ll && tail[2] < cc
-      break
-    endif
-    hl = synID(ll, cc, 1)->synIDattr('name') ?? hl
-    win_execute(id, $"call matchaddpos('{hl}', [[{l}, {c}]])")
-    c += 1
-    if motion ==# 'block' && tail[2] <= cc || getline(ll)->len() < cc
-      l += 1
-      c = 1
-    endif
-  endwhile
+  if g:popclip.syntax_highlight
+    var l = 1
+    var c = 1
+    var hl = 'Normal'
+    while true
+      const ll = head[1] + l - 1
+      const cc = (motion ==# 'block' || l ==# 1 ? head[2] : 1) + c - 1
+      if tail[1] < ll || tail[1] ==# ll && tail[2] < cc
+        break
+      endif
+      hl = synID(ll, cc, 1)->synIDattr('name') ?? hl
+      win_execute(id, $"call matchaddpos('{hl}', [[{l}, {c}]])")
+      c += 1
+      if motion ==# 'block' && tail[2] <= cc || getline(ll)->len() < cc
+        l += 1
+        c = 1
+      endif
+    endwhile
+  endif
 
   if g:popclip.clip_and_move
     redraw!

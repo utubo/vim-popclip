@@ -40,9 +40,9 @@ export def Clip(motion: string = '')
   var pos = screenpos(0, head[1], head[2])
   var text = []
   if motion ==# 'block'
-    normal! gv
+    noautocmd normal! gv
     text = getregion(getpos("'<"), getpos("'>"), { type: mode() })
-    feedkeys("\<Esc>")
+    noautocmd execute "normal! \<Esc>"
   elseif motion ==# 'char'
     text = getregion(head, tail, { type: 'v' })
     if head[1] !=# tail[1]

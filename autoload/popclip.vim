@@ -168,11 +168,11 @@ enddef
 # }}}
 
 # Input prompt for operation targets {{{
-var compids = []
+var popupids = []
 
 export def Completion(a: any, c: any,  p: any): list<string>
   var l = []
-  for id in compids
+  for id in popupids
     l->add($'{id}')
   endfor
   return l
@@ -188,27 +188,27 @@ def GetWinid(): list<number>
     endif
   endif
   var targets = []
-  compids = PopupList()
-  if compids->len() ==# 0
+  popupids = PopupList()
+  if popupids->len() ==# 0
   # NOP
-  elseif compids->len() ==# 1
-    targets = compids
+  elseif popupids->len() ==# 1
+    targets = popupids
   else
     try
-      for id in compids
+      for id in popupids
         popup_setoptions(id, { title: $'{id}' })
       endfor
       redraw
       const ids = input('winid: ', '', 'customlist,popclip#Completion')
       if ids ==# '*'
-        targets = compids
+        targets = popupids
       else
         for id in ids->split('[^0-9]\+')
           targets->add(id->str2nr())
         endfor
       endif
     finally
-      for id in compids
+      for id in popupids
         popup_setoptions(id, { title: '' })
       endfor
       redraw

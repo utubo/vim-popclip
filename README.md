@@ -103,7 +103,7 @@ Use the following `<Plug>` mappings if you want manual control over your keybind
 
 # Functions
 
-Users can call the following functions to interact with the plugin:
+You can call the following functions to interact with the plugin:
 
 - `popclip#Init({settings})`  
   Initializes the plugin with user configurations.  

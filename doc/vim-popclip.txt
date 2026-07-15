@@ -10,7 +10,8 @@ Table of Contents                              *vim-popclip-table-of-contents*
   - Usage                                      |vim-popclip-vim-popclip-usage|
   - Configuration                      |vim-popclip-vim-popclip-configuration|
   - Mappings                                |vim-popclip-vim-popclip-mappings|
-  - License                                  |vim-popclip-vim-popclip-license|
+2. Functions                                           |vim-popclip-functions|
+  - License                                    |vim-popclip-functions-license|
 
 ==============================================================================
 1. vim-popclip                                       *vim-popclip-vim-popclip*
@@ -128,7 +129,20 @@ keybindings:
     Forces the popup text to be yanked as linewise.
 
 
-LICENSE                                      *vim-popclip-vim-popclip-license*
+==============================================================================
+2. Functions                                           *vim-popclip-functions*
+
+Users can call the following functions to interact with the plugin:
+
+- `popclip#Init({settings})`
+    Initializes the plugin with user configurations.
+    (See the Configuration section for details.)
+- `popclip#PopupList()`
+    Return a List with the window-ID of all existing popclip popups.
+    Return type: `list<number>`
+
+
+LICENSE                                        *vim-popclip-functions-license*
 
 NYSL <http://www.kmonos.net/nysl/index.en.html> (c) utubo
 

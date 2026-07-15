@@ -132,7 +132,7 @@ keybindings:
 ==============================================================================
 2. Functions                                           *vim-popclip-functions*
 
-Users can call the following functions to interact with the plugin:
+You can call the following functions to interact with the plugin:
 
 - `popclip#Init({settings})`
     Initializes the plugin with user configurations.

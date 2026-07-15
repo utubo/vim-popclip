@@ -41,12 +41,7 @@ export def Clip(motion: string = '')
   var text = []
   if motion ==# 'block'
     normal! gv
-    tail[2] = max([tail[2], getcurpos()[4]])
-    const rx1 = $'\%{tail[2]}c.*'
-    const rx2 = $'\%{head[2]}c.*'
-    for l in range(head[1], tail[1])
-      text->add(getline(l)->substitute(rx1, '', '')->matchstr(rx2))
-    endfor
+    text = getregion(getpos("'<"), getpos("'>"), { type: mode() })
     feedkeys("\<Esc>")
   elseif motion ==# 'char'
     text = getregion(head, tail, { type: 'v' })

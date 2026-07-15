@@ -21,7 +21,7 @@ jobs:
         with:
           vimdoc: ${{ github.event.repository.name }}
           version: "Vim v9.2"
-          args: --no-section-divs
+          treesitter: true
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "🤖Auto generate docs"

@@ -121,9 +121,14 @@ def MoveFilter(popupid: number, k: string): bool
   var dx = 0
   var dy = 0
   var dz = 0
-  if k ==# ' ' || k ==# "\<CR>" || k ==# "\<Esc>"
+  if k ==# ' ' || k ==# "\<CR>"
     for _id in moveids
       popup_setoptions(_id, { title: '' })
+    endfor
+    popup_close(popupid)
+  elseif k ==# "\<Esc>"
+    for _id in moveids
+      popup_close(_id)
     endfor
     popup_close(popupid)
   elseif k ==# 'j'

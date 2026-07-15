@@ -5,15 +5,12 @@
 Table of Contents                              *vim-popclip-table-of-contents*
 
 1. vim-popclip                                       |vim-popclip-vim-popclip|
-2. Usage                                                   |vim-popclip-usage|
-  - Installation                              |vim-popclip-usage-installation|
-  - Clip Visual Block                    |vim-popclip-usage-clip-visual-block|
-  - Move Popup                                  |vim-popclip-usage-move-popup|
-  - Close Popup                                |vim-popclip-usage-close-popup|
-  - Yank Popup Text                        |vim-popclip-usage-yank-popup-text|
-3. Configuration                                   |vim-popclip-configuration|
-4. Mappings                                             |vim-popclip-mappings|
-5. License                                               |vim-popclip-license|
+  - Requirements                        |vim-popclip-vim-popclip-requirements|
+  - Installation                        |vim-popclip-vim-popclip-installation|
+  - Usage                                      |vim-popclip-vim-popclip-usage|
+  - Configuration                      |vim-popclip-vim-popclip-configuration|
+  - Mappings                                |vim-popclip-vim-popclip-mappings|
+  - License                                  |vim-popclip-vim-popclip-license|
 
 ==============================================================================
 1. vim-popclip                                       *vim-popclip-vim-popclip*
@@ -23,11 +20,12 @@ A Vim plugin that displays selected text in a popup window.
 
 
 
-==============================================================================
-2. Usage                                                   *vim-popclip-usage*
+REQUIREMENTS                            *vim-popclip-vim-popclip-requirements*
+
+Vim9 script
 
 
-INSTALLATION                                  *vim-popclip-usage-installation*
+INSTALLATION                            *vim-popclip-vim-popclip-installation*
 
 >vim
     vim9script
@@ -36,7 +34,10 @@ INSTALLATION                                  *vim-popclip-usage-installation*
 <
 
 
-CLIP VISUAL BLOCK                        *vim-popclip-usage-clip-visual-block*
+USAGE                                          *vim-popclip-vim-popclip-usage*
+
+
+CLIP VISUAL BLOCK ~
 
 1. Enter Visual Block mode and select text.
 2. Press `C`
@@ -46,7 +47,7 @@ Also, you can clip text-obj.
 e.g.) Press `Ciw` in Normal Mode.
 
 
-MOVE POPUP                                      *vim-popclip-usage-move-popup*
+MOVE POPUP ~
 
 1. Press `cC` to enter move mode.
 2. Use `h`, `j`, `k`, `l` to move the popup window.
@@ -58,7 +59,7 @@ If multiple popups are open:
 - Input the specific `winid` to select it.
 
 
-MOVE MODE MAPPINGS ~
+MOVE MODE MAPPINGS
 
 - `h` … Left
 - `j` … Up
@@ -73,19 +74,18 @@ MOVE MODE MAPPINGS ~
 - `<CR>` or `<Esc>` … Confirm and exit.
 
 
-CLOSE POPUP                                    *vim-popclip-usage-close-popup*
+CLOSE POPUP ~
 
 Press `dC`
 
 
-YANK POPUP TEXT                            *vim-popclip-usage-yank-popup-text*
+YANK POPUP TEXT ~
 
 - Linewise: Press `yC` or `yaC`
 - Blockwise: Press `yiC`
 
 
-==============================================================================
-3. Configuration                                   *vim-popclip-configuration*
+CONFIGURATION                          *vim-popclip-vim-popclip-configuration*
 
 To customize the plugin, pass a dictionary of settings to `popclip#Init()`. You
 only need to specify the options you want to change from the default values:
@@ -113,8 +113,7 @@ only need to specify the options you want to change from the default values:
     Options passed directly to `popup_create()` arguments.
 
 
-==============================================================================
-4. Mappings                                             *vim-popclip-mappings*
+MAPPINGS                                    *vim-popclip-vim-popclip-mappings*
 
 Use the following `<Plug>` mappings only if you want manual control over your
 keybindings:
@@ -129,8 +128,7 @@ keybindings:
     Forces the popup text to be yanked as linewise.
 
 
-==============================================================================
-5. License                                               *vim-popclip-license*
+LICENSE                                      *vim-popclip-vim-popclip-license*
 
 NYSL <http://www.kmonos.net/nysl/index.en.html> (c) utubo
 
